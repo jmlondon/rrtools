@@ -593,7 +593,7 @@ use_directory <- function(path, ignore = FALSE, pkg = ".") {
 create_directories <- function(location, pkg){
 
   if (location %in% c("analysis", "vignettes", "inst")) {
-  usethis::ui_done("Creating ", usethis::ui_value(location), " directory and contents")
+  usethis::ui_done("Creating {usethis::ui_value(location)} directory and contents")
   use_directory(location, pkg = pkg)
   use_directory(paste0(location, "/paper"), pkg = pkg)
   use_directory(paste0(location, "/figures"), pkg = pkg)
